@@ -2,6 +2,7 @@
     text-align: right;
     width: 218px;
     margin: 3px 3px 3px 3px;
+    border-radius: 5px;
     background-color: #D0D9EE;
 }
 
@@ -20,6 +21,7 @@
     font-size: 30px;
     height: 50px;
     margin-right: 5px;
+    word-wrap: break-word;
 }
 
 .button, .num-button{

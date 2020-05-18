@@ -10,8 +10,14 @@ const evalBtn = document.querySelector('.eval-button');
 const displayCurr = document.querySelector('.current');
 const displayPrev = document.querySelector('.prev');
 
+let solved = false;
+
 numBtns.forEach((item, index) => {
     item.addEventListener('click', e =>{
+        if(solved){
+            displayCurr.innerHTML = "";
+            solved = false;
+        }
         let display = displayCurr.innerHTML;
         if(displayCurr.innerHTML === "0"){
             display = displayCurr.innerHTML.slice(0,0);
@@ -31,14 +37,18 @@ opBtns.forEach((item,index) =>{
             display = [...display];
             display.pop();
             displayCurr.innerHTML = display.join("");
+        } else if ([...display].shift() === "."){
+            display = [...display];
+            display.shift();
+            displayCurr.innerHTML = display.join("");
         }
-        displayPrev.innerHTML = displayCurr.innerHTML;
         let secondNum = displayCurr.innerHTML;
         displayCurr.innerHTML = "0";
-
+        secondNum = [...secondNum];
+        secondNum.push(opBtns[index].innerHTML);
+        displayPrev.innerHTML = secondNum.join("");
     })
 })
-
 ceBtn.addEventListener('click', e => {
     e.preventDefault();
     displayCurr.innerHTML = "0";
@@ -72,5 +82,13 @@ dotBtn.addEventListener('click', e => {
 })
 evalBtn.addEventListener('click', e => {
     e.preventDefault();
-
+    let numA = displayPrev.innerHTML;
+    let numB = displayCurr.innerHTML;
+    numA = [...numA];
+    const op = numA.pop();
+    numA = numA.join("");
+    let solve = eval(`${numA} ${op} ${numB}`)
+    displayCurr.innerHTML = solve;
+    displayPrev.innerHTML = "";
+    solved = true;
 })
