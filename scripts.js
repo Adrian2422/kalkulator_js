@@ -24,6 +24,7 @@ numBtns.forEach((item, index) => {
     item.addEventListener('click', e =>{
         if(solved){
             displayCurr.innerHTML = "";
+            displayPrev.innerHTML = "";
             solved = false;
         }
         let display = displayCurr.innerHTML;
@@ -115,11 +116,11 @@ evalBtn.addEventListener('click', e => {
     e.preventDefault();
     let numA = displayPrev.innerHTML;
     let numB = displayCurr.innerHTML;
+    displayPrev.innerHTML = numA + numB;
     numA = [...numA];
     const op = numA.pop();
     numA = numA.join("");
     let solve = eval(`${numA} ${op} ${numB}`)
     displayCurr.innerHTML = solve;
-    displayPrev.innerHTML = "";
     solved = true;
 })
