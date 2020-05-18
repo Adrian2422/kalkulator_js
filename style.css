@@ -1,0 +1,64 @@
+
+.display{
+    font-size: 30px;
+    color: black;
+    text-align: right;
+    line-height: 50px;
+    width: 218px;
+    height: 50px;
+    margin: 3px 0 3px 3px;
+    background-color: #D0D9EE;
+}
+.button, .num-button{
+    width: 50px;
+    height: 50px;
+    margin: 3px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #96BE91;
+}
+.op-button, .backspace-button{
+    width: 50px;
+    height: 50px;
+    margin: 3px 3px 6px 3px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #96BE91;
+}
+.container{
+    font-size: 20px;
+    padding: 3px;
+    height: 336px;
+    width: 224px;
+    background-color: #353338;
+    border: 3px solid #000000;
+    border-radius: 10px;
+}
+.main-board{
+    height: 280px;
+    width: 168px;
+    float: left;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    height: 56px;
+    width: 168px;
+    clear: both;
+}
+.row .button, .num-button{
+    float: left;
+}
+.numbers{
+    width: 168px;
+}
+#operators{
+    height: 280px;
+    width: 56px;
+    float: left;
+}
+
+.button:hover, .num-button:hover, .op-button:hover, .backspace-button:hover{
+    cursor: pointer;
+    background-color: #BAD3AF;
+}
