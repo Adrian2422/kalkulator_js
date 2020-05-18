@@ -9,47 +9,48 @@
     <title>Kalkulator</title>
 </head>
 <body>
-<div class="container">
-
-    <div class="display"></div>
-
-    <div class="main-board">
-        <div id="misc" class="row">
-            <div class="p-button button">%</div>
-            <div class="ce-button button">CE</div>
-            <div class="c-button button">C</div>
+    <div class="container">
+        <div class="display">
+            <div class="prev">123</div>
+            <div class="current">123</div>
         </div>
-        <div class="numbers">
-            <div class="row">
-                <div class="num-button">7</div>
-                <div class="num-button">8</div>
-                <div class="num-button">9</div>
+        <div class="main-board">
+            <div id="misc" class="row">
+                <div class="p-button button">%</div>
+                <div class="ce-button button">CE</div>
+                <div class="c-button button">C</div>
             </div>
-            <div class="row">
-                <div class="num-button">4</div>
-                <div class="num-button">5</div>
-                <div class="num-button">6</div>
+            <div class="numbers">
+                <div class="row">
+                    <div class="num-button button">7</div>
+                    <div class="num-button button">8</div>
+                    <div class="num-button button">9</div>
+                </div>
+                <div class="row">
+                    <div class="num-button button">4</div>
+                    <div class="num-button button">5</div>
+                    <div class="num-button button">6</div>
+                </div>
+                <div class="row">
+                    <div class="num-button button">1</div>
+                    <div class="num-button button">2</div>
+                    <div class="num-button button">3</div>
+                </div>
+                <div class="row">
+                    <div class="num-button button">0</div>
+                    <div class="dot-button button">.</div>
+                    <div class="eval-button button">=</div>
+                </div>
             </div>
-            <div class="row">
-                <div class="num-button">1</div>
-                <div class="num-button">2</div>
-                <div class="num-button">3</div>
-            </div>
-            <div class="row">
-                <div class="num-button">0</div>
-                <div class="dot-button button">.</div>
-                <div class="equals-button button">=</div>
-            </div>
+        </div>
+        <div id="operators">
+            <div class="backspace-button button">&lt</div>
+            <div class="op-button button">/</div>
+            <div class="op-button button">*</div>
+            <div class="op-button button">-</div>
+            <div class="op-button button">+</div>
         </div>
     </div>
-    <div id="operators">
-        <div class="backspace-button">&lt</div>
-        <div class="op-button">/</div>
-        <div class="op-button">*</div>
-        <div class="op-button">-</div>
-        <div class="op-button">+</div>
-    </div>
-</div>
-<script src="scripts.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
