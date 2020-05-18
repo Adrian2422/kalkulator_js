@@ -20,7 +20,6 @@ let memory = {
     value: "0",
     empty: true,
 };
-
 numBtns.forEach((item, index) => {
     item.addEventListener('click', e =>{
         if(solved){
@@ -74,6 +73,7 @@ memRecBtn.addEventListener('click', e => {
     e.preventDefault();
     memory.value = displayCurr.innerHTML;
     memory.empty = false;
+    document.querySelector('.memRead-button').setAttribute('style', "border:3px solid #00ff44;border-radius:5px;margin:0;");
 })
 memReadBtn.addEventListener('click', e => {
     displayCurr.innerHTML = memory.value;
@@ -87,6 +87,7 @@ cBtn.addEventListener('click', e => {
     e.preventDefault();
     displayCurr.innerHTML = "0";
     memory.value = "0";
+    document.querySelector('.memRead-button').removeAttribute('style');
 })
 backBtn.addEventListener('click', e => {
     e.preventDefault();
