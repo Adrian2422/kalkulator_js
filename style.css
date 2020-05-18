@@ -1,6 +1,6 @@
 .display{
     text-align: right;
-    width: 218px;
+    width: 274px;
     margin: 3px 3px 3px 3px;
     border-radius: 5px;
     background-color: #D0D9EE;
@@ -21,7 +21,6 @@
     font-size: 30px;
     height: 50px;
     margin-right: 5px;
-    word-wrap: break-word;
 }
 
 .button, .num-button{
@@ -32,7 +31,7 @@
     line-height: 50px;
     background-color: #96BE91;
 }
-.op-button, .backspace-button{
+.op-button, .memRec-button, .memRead-button, .backspace-button, .root-button, .power-button, .log-button{
     width: 50px;
     height: 50px;
     margin: 3px 3px 6px 3px;
@@ -44,7 +43,7 @@
     font-size: 20px;
     padding: 3px;
     height: 366px;
-    width: 224px;
+    width: 280px;
     background-color: #353338;
     border: 3px solid #000000;
     border-radius: 10px;
@@ -72,7 +71,7 @@
 .numbers{
     width: 168px;
 }
-#operators{
+#operatorsStd, #operatorsAdv{
     height: 280px;
     width: 56px;
     float: left;
