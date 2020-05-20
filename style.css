@@ -1,28 +1,34 @@
-.display{
+#display{
     text-align: right;
     width: 274px;
     margin: 3px 3px 3px 3px;
     border-radius: 5px;
     background-color: #D0D9EE;
 }
-
 .prev{
+    height: 25px;
+    width: 100%;
+}
+#higherDisplay{
     color: #3b3b3b;
     line-height: 40px;
     font-size: 20px;
-    height: 25px;
-    margin-bottom: 5px;
-    margin-right: 5px;
+    height: 100%;
+    width: calc(100% - 2%);
+    margin: 5px 5px 5px 0;
 }
-
-.current{
+#lowerDisplay{
     color: black;
     line-height: 50px;
     font-size: 30px;
-    height: 50px;
-    margin-right: 5px;
-}
+    height: 100%;
 
+    margin: 0 5px 0 0;
+}
+.current{
+    height: 50px;
+    width: 100%;
+}
 .button, .num-button{
     width: 50px;
     height: 50px;
@@ -41,6 +47,7 @@
 }
 .container{
     font-size: 20px;
+    font-family: monospace;
     padding: 3px;
     height: 366px;
     width: 280px;
@@ -63,11 +70,9 @@
 .button{
     border-radius: 5px;
 }
-
 .row .button, .num-button{
     float: left;
 }
-
 .numbers{
     width: 168px;
 }
@@ -76,7 +81,6 @@
     width: 56px;
     float: left;
 }
-
 .button:hover, .num-button:hover, .op-button:hover, .backspace-button:hover{
     cursor: pointer;
     background-color: #BAD3AF;

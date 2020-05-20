@@ -12,8 +12,8 @@ const rootBtn = document.querySelector('.root-button');
 const powBtn = document.querySelector('.power-button');
 const logBtn = document.querySelector('.log-button')
 
-const displayCurr = document.querySelector('.current');
-const displayPrev = document.querySelector('.prev');
+const displayCurr = document.querySelector('#lowerDisplay');
+const displayPrev = document.querySelector('#higherDisplay');
 
 let solved = false;
 let memory = {
@@ -31,7 +31,7 @@ numBtns.forEach((item, index) => {
         if(displayCurr.innerHTML === "0"){
             display = displayCurr.innerHTML.slice(0,0);
         }
-        if(display.length === 12){
+        if(display.length === 15){
             e.preventDefault();
         } else {
             display += numBtns[index].innerHTML;
